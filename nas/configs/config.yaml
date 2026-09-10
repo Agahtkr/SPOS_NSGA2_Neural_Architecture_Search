@@ -1,0 +1,31 @@
+# configs/search_config.yaml
+num_layers: 20
+base_channels: 48
+in_channels: 1
+num_classes: 5
+class_mapping:
+  0: 0
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+input_resolution: 640
+batch_size: 24
+supernet_epochs: 500
+learning_rate: 0.001
+weight_decay: 0.0001
+save_dir: "experiments/"
+bn_calib_batches: 10
+paths_per_batch: 1
+train_img_dir: "/home/aisoft/Aisoft/Gumus-su/0.5L-area/data/dataset_04_09_v2_seed1/images/train"
+train_lbl_dir: "/home/aisoft/Aisoft/Gumus-su/0.5L-area/data/dataset_04_09_v2_seed1/labels/train"
+val_image_dir: "/home/aisoft/Aisoft/Gumus-su/0.5L-area/data/dataset_04_09_v2_seed1/images/val"
+val_lbl_dir: "/home/aisoft/Aisoft/Gumus-su/0.5L-area/data/dataset_04_09_v2_seed1/labels/val"
+
+
+# NSGA-II settings
+pop_size: 75
+num_generations: 40
+elitism_ratio: 0.2
+crossover_rate: 0.9
+mutation_rate: 0.2
